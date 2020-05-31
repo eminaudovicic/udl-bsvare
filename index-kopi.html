@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<body>
+<script>
+var minliste=[""];
+var brugere=["admin"];
+var passwords=["ProjektItB2@2@"];
+var nybruger;
+var nytpassword
+
+function opretbruger()
+{
+  window.open("index1.html");
+
+}
+
+function login()
+{
+  var mitnavn=document.getElementById("navn").value;
+  var mitpswrd=document.getElementById("pswrd").value;
+
+  brugerindex = brugere.indexOf(mitnavn);
+  aktpassword=passwords[brugerindex];
+  if (mitpswrd==aktpassword)
+  {
+    window.open("index2.html");
+  }
+  else{
+    alert("Prøv igen, forkert brugernavn eller password");
+  }
+}
+</script>
+<form>
+  <form action="">
+    <h1><b>LOGIN HER FOR AT SE UDLØBSVARER FRA FLERE FORSKELLIGE BUTIKKER</b></h1>
+    <div class="center">
+      <img src="coop.jpeg" class="center" style="width: 1000px; height: 300px; ">
+    </div>
+    <label for="fname">Brugernavn:</label><br>
+    <input type="text" id="navn" name="navn" value=""><br>
+    <label for="lname">Password:</label><br>
+    <input type="password" id="pswrd" name="pswrd" class="form-control" value="secret"><br><br>
+      <div class="col-md-6">
+              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+      </div>
+  <button onclick="login()" href="index1.html">Login</button><br>
+  <button onclick="opretbruger()">Opret bruger</button><br>
+</form>
+
+
+<br>
+<div id="felt">
+<style>
+
+  body{
+    background-color: lightgray;
+  }
+  h1{
+    text-align: center;
+    padding: 10px;
+    }
+  label
+  {
+    text-align: center;
+    font-size: 30px;
+  }
+  form{
+    text-align: center;
+
+  .center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  }
+  input {text-align: center;}
+  button {text-align: center;}
+
+
+
+</style>
+
+</body>
+</HTML>
